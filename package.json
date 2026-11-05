@@ -1,0 +1,9 @@
+{
+  "name": "lcen",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "python3 -m http.server ${PORT:-7100}",
+    "deploy": "rm -rf dist && mkdir -p dist && cp index.html logo.png favicon.png dist/ && cp -R email dist/ && wrangler pages deploy dist --project-name=lcen --branch=main"
+  }
+}

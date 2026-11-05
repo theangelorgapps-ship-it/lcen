@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KV — Freight Group</title>
-<link rel="icon" href="data:,">
+<title>La Chartier Exports — Freight Group</title>
+<link rel="icon" type="image/png" href="favicon.png">
 <style>
 @font-face {
   font-family: 'Anton';
@@ -57,13 +57,9 @@ body {
   justify-content: space-between;
   padding: calc(var(--u) * 24) calc(var(--u) * 26);
 }
-.logo {
-  font-weight: 600;
-  font-size: calc(var(--u) * 30);
-  letter-spacing: -.06em;
-  color: var(--ink);
-  text-decoration: none;
-}
+.logo { display: inline-flex; align-items: center; text-decoration: none; }
+.logo img { height: calc(var(--u) * 36); width: auto; display: block; }
+html.phone .logo img { height: calc(var(--u) * 42); }
 .nav-right { display: flex; align-items: center; gap: calc(var(--u) * 28); }
 .nav-link, .nav-pill {
   font-weight: 500;
@@ -239,7 +235,7 @@ html.phone .card-body { font-size: calc(var(--u) * 13); }
 <body>
 <div class="track">
   <nav class="nav">
-    <a class="logo" href="#">KV</a>
+    <a class="logo" href="#" aria-label="La Chartier Exports — home"><img src="logo.png" alt="La Chartier Exports with Sherry"></a>
     <div class="nav-right">
       <a class="nav-link" href="#">&rarr; Menu</a>
       <a class="nav-link nav-follow" href="#">Follow</a>
@@ -259,32 +255,43 @@ html.phone .card-body { font-size: calc(var(--u) * 13); }
           <div class="lead-copy">
             <p>From air to sea, from customs clearance to the last mile, we bring decades of practice to every freight discipline.</p>
             <p>One integrated network means one partner, one point of contact and full visibility from origin to destination.</p>
+            <p>Air, ocean, road, customs, storage and final delivery — keep scrolling to see each service and how they join up under one group.</p>
           </div>
         </div>
         <article class="card" aria-label="Air freight">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.5 2.5 11 13"/><path d="M21.5 2.5 15 21.5l-4-8.5-8.5-4 19-6.5Z"/></svg>
           <h3 class="card-title sweep">Air<br>freight</h3>
-          <p class="card-body sweep">Express, priority and deferred options across global lanes, booked and tracked end to end.</p>
+          <p class="card-body sweep">Express, priority and deferred options across global lanes, booked and tracked end to end. From single cartons to full charters, every shipment flies the routing that best balances speed and cost.</p>
         </article>
         <article class="card" aria-label="Ocean freight">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15.5h18l-2.3 5H5.3L3 15.5Z"/><path d="M6.5 11.5h11v4h-11z"/><path d="M9.5 7.5h5v4h-5z"/></svg>
           <h3 class="card-title sweep">Ocean<br>freight</h3>
-          <p class="card-body sweep">FCL and LCL sailings on every major trade lane, with carrier choice based on cost and transit time.</p>
+          <p class="card-body sweep">FCL and LCL sailings on every major trade lane, with carrier choice based on cost and transit time. Booking, documentation and port handling are managed together, so boxes move without surprises.</p>
         </article>
         <article class="card" aria-label="Customs brokerage">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2.5h7.5L19 8v13.5H6V2.5Z"/><path d="M13.5 2.5V8H19"/><path d="m9 14 2.2 2.2L15.5 11.7"/></svg>
           <h3 class="card-title sweep">Customs<br>brokerage</h3>
-          <p class="card-body sweep">Licensed in-house brokers for classification, duties and inspections, so goods clear first time.</p>
+          <p class="card-body sweep">Licensed in-house brokers for classification, duties and inspections, so goods clear first time. Entries are pre-lodged before arrival, keeping cargo off the quay and on the road.</p>
+        </article>
+        <article class="card" aria-label="Road and rail freight">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 15.5v-8h10v8"/><path d="M12.5 10.5h4.6l3.4 3.4v1.6h-8"/><circle cx="6.3" cy="17.6" r="1.8"/><circle cx="17.2" cy="17.8" r="1.8"/></svg>
+          <h3 class="card-title sweep">Road<br>&amp; rail</h3>
+          <p class="card-body sweep">Full and part loads across regional and cross-border corridors, with rail options that cut cost and carbon on long hauls. GPS-tracked fleets and booked time slots keep delivery windows tight.</p>
         </article>
         <article class="card" aria-label="Warehousing and 3PL">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.8 20V9.2L12 3.5l9.2 5.7V20"/><path d="M6.2 20v-7.5h11.6V20"/><path d="M6.2 15h11.6M6.2 17.5h11.6"/></svg>
           <h3 class="card-title sweep">Warehousing<br>and 3PL</h3>
-          <p class="card-body sweep">Bonded and general storage, pick and pack, and distribution that plugs straight into transport.</p>
+          <p class="card-body sweep">Bonded and general storage, pick and pack, and distribution that plugs straight into transport. Real-time stock visibility and same-day dispatch keep inventory working, not waiting.</p>
         </article>
         <article class="card" aria-label="Project cargo">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5V6"/><path d="M12 6a3 3 0 0 1 3 3c0 1.8-1.4 3-3 3s-3-1.2-3-3"/><path d="M12 12v2"/><path d="M6 15.5h12l2 6H4l2-6Z"/></svg>
           <h3 class="card-title sweep">Project<br>cargo</h3>
-          <p class="card-body sweep">Oversized and heavy-lift moves, engineered, permitted and escorted from factory to foundation.</p>
+          <p class="card-body sweep">Oversized and heavy-lift moves, engineered, permitted and escorted from factory to foundation. Route surveys, cranes and specialist trailers are planned as one operation, not three.</p>
+        </article>
+        <article class="card" aria-label="Last-mile delivery">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.5S5.5 16.2 5.5 11.3A6.5 6.5 0 0 1 12 4.8a6.5 6.5 0 0 1 6.5 6.5C18.5 16.2 12 21.5 12 21.5Z"/><circle cx="12" cy="11.3" r="2.3"/></svg>
+          <h3 class="card-title sweep">Last<br>mile</h3>
+          <p class="card-body sweep">Final delivery to door, depot or site, planned as part of the journey rather than bolted on. Live ETAs and proof of delivery close the loop for you and your customers.</p>
         </article>
       </div>
       <div class="band-pill">Our services</div>
