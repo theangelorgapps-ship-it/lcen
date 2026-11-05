@@ -4,6 +4,6 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "python3 -m http.server ${PORT:-7100}",
-    "deploy": "rm -rf dist && mkdir -p dist && cp index.html logo.png logo.avif favicon.png favicon.avif dist/ && cp -R email dist/ && wrangler pages deploy dist --project-name=lcen --branch=main"
+    "deploy": "rm -rf dist && mkdir -p dist && cp index.html logo.png logo.avif favicon.png favicon.avif hero-1080.mp4 hero-720.mp4 hero-poster.jpg dist/ && cp -R email dist/ && wrangler pages deploy dist --project-name=lcen --branch=main"
   }
 }

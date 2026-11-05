@@ -32,6 +32,7 @@
 :root {
   --u: min(calc(100vw / 1440), calc(100vh / 960));
   --ink: #111;
+  --floor: #161618;
   --cobalt: #2f63ff;
   --giant-grey: #e9e9e9;
   --edge-px: 60vh;
@@ -83,7 +84,7 @@ html.phone .nav-follow { display: none; }
   height: 100vh;
   height: 100lvh;
   overflow: hidden;
-  background: linear-gradient(#fff 0 var(--edge-px), #111 var(--edge-px) 100%);
+  background: linear-gradient(#fff 0 var(--edge-px), var(--floor) var(--edge-px) 100%);
 }
 
 .clip {
@@ -132,7 +133,7 @@ html.phone .readout { left: 20px; top: 22px; font-size: 11px; }
   left: 0; right: 0;
   top: var(--edge-px);
   bottom: 0;
-  background: var(--ink);
+  background: var(--floor);
   overflow: hidden;
   opacity: var(--ph);
 }
@@ -246,7 +247,7 @@ html.phone .card-body { font-size: calc(var(--u) * 13); }
   <section class="scene">
     <video class="clip" muted playsinline preload="auto" disablepictureinpicture role="img"
       aria-label="A reach stacker lifts a navy container and loads it onto a semi-truck"
-      poster="https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/2307e4bf-be39-42b4-b579-e168aeccabf0.jpg"></video>
+      poster="hero-poster.jpg"></video>
     <div class="giant" aria-hidden="true">OUR SERVICES</div>
     <div class="readout" aria-hidden="true">00 KM/H</div>
     <div class="band">
@@ -302,8 +303,8 @@ html.phone .card-body { font-size: calc(var(--u) * 13); }
 <script>
 (() => {
   'use strict';
-  const U1080 = 'https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/409763c0-95f4-49d3-a601-dc564d55072b.mp4';
-  const U720 = 'https://d2ol7oe51mr4n9.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/b3718419-7a0a-478d-bfb0-0ff8bef7f3f7.mp4';
+  const U1080 = 'hero-1080.mp4';
+  const U720 = 'hero-720.mp4';
   const A = 2.4;
   const FALLBACK_DUR = 4.04;
 
@@ -345,19 +346,19 @@ html.phone .card-body { font-size: calc(var(--u) * 13); }
     if (phone()) {
       w = vw * 1.55;
       h = w * 9 / 16;
-      left = 0.5 * vw - 0.40 * w;
-      top = 0.36 * vh - 0.448 * h;
+      left = 0.5 * vw - 0.521 * w;
+      top = 0.36 * vh - 0.83 * h;
     } else {
-      const s = Math.max(vw / 1920, vh / 1080);
-      w = 1920 * s; h = 1080 * s;
+      h = vh * 0.55 / 0.83;
+      w = h * 16 / 9;
       left = (vw - w) / 2;
-      top = (vh - h) / 2;
+      top = 0;
     }
     video.style.width = w + 'px';
     video.style.height = h + 'px';
     video.style.left = left + 'px';
     video.style.top = top + 'px';
-    scene.style.setProperty('--edge-px', (top + 0.448 * h) + 'px');
+    scene.style.setProperty('--edge-px', (top + 0.83 * h) + 'px');
     stripW = strip.scrollWidth;
     lettersW = giant.scrollWidth;
     B = (stripW + 0.45 * vw) / vw * 1.1;
