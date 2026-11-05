@@ -1,0 +1,8 @@
+.git
+.unlazy
+.wrangler
+scripts
+GATES.md
+wrangler.toml
+.assetsignore
+node_modules
